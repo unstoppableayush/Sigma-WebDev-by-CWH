@@ -1,0 +1,40 @@
+
+Node Repl -> Read Evaluate Print Loop
+
+=> node terminal have this feature
+
+PS C:\Users\ayush> node
+Welcome to Node.js v20.10.0.
+Type ".help" for more information.
+> 3 === "3"
+false
+> a= 4
+4
+> b="4"
+'4'
+> a==b
+true
+> a===b
+false
+> c
+
+comments
+---------
+
+// single line comment in Javascript
+
+/* multi line comment
+  in Javascript
+  
+*/
+
+
+Javascript Terniary operator
+-----------------------------
+
+Evaluates a condition and executes a block of code on 
+the condition
+
+condition ? exp1 : exp2
+
+ex: (marks >10 ) ? "Pass" : "Fail" ;

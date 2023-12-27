@@ -1,0 +1,50 @@
+
+
+ Variables => It is a container that stores some value.
+
+ Rules For Choosing the Variables
+------------------------------------
+
+1. Letters , digits , underscore & sign allowed
+2. Must begins with a , $ , _ or a Letters(not Number)
+3. Javascript reserved words cant be used as a Variable name
+4. Ayush & aYUsh are different Variable ( Case Sensitive)
+
+=> typeof operator used to know the type of variale
+
+Var & Let in Javascript
+----------------------------
+
+1. Var is globally scoped while let & const are blocked scoped
+2. Var can be updated & re-declared within it's scoped
+3. let can be updated but not re-declared
+4. const can neither be updated nor be re-declared
+5. Var variables are intiated with undefined whereas 
+let and const variable are not intialized. 
+6.Const must be intialized at the time of declaration unlike 
+let and var.
+
+
+Primitive Data Types & Objects
+--------------------------------
+
+=> Primitive Data Types are set of basic datatypes in Javascript.
+=> Object is a non-Primitive datatype in Javascript.
+=> These are the 7 Primitive datatype in Javascript.
+ 
+( Null  , Number , String , Symbol , undefined , Boolean , BigInt )
+
+
+Object
+---------------------------------
+=> Object in Javascript are key-value pairs.
+=> An object in Javascript can be created as follows
+
+const item = {
+    key -> name : "Ayush", <- value
+           roll_no: 22463
+}
+
+
+
+

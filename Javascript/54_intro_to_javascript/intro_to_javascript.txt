@@ -1,0 +1,17 @@
+=> Javascript can be used in both frontend and backend.
+=> There are three ways to include Javascript.
+
+    1.Inline Javascript
+    2.Internal Javascript
+    3.External Javascript
+
+
+=> We can use Browser Run Time Enviournment (V8 for chrome)
+    to run Javascript
+    Also We can use Node.Js Runtime enviournment to run
+    Javascript.
+
+=>There are some functionalites that only work in Browser 
+    Runtime Enviournment such as prompt alert but not in 
+    Node js Runtime Enviournment.
+    

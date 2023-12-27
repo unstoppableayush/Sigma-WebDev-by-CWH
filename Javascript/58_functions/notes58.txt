@@ -1,0 +1,33 @@
+
+function -> is a block of code designed to perform specific operation.
+It is manily used to reduce the repative task.
+
+syntaxt 
+----------------
+ 
+  function myFunc(){
+    //code
+  }
+
+ function with parameter => 
+
+  function bindFunc(param1 ,param2){
+    //code
+  }
+  =>here parameter behaves as local variable
+
+  bindFunc(7 , 8) ; => function invocation
+
+=> a function can aslo return a value. The value is
+"returned" back to the caller.
+
+
+Another Way to Create a function 
+-----------------------------------------
+
+const sum =(a,b) => {
+    let c = a+b;
+    return c;
+}
+
+
