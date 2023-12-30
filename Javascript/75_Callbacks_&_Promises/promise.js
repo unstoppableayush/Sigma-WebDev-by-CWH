@@ -35,14 +35,28 @@ let prom2 = new Promise((resolve , reject)=>{
 });
 
 
-// let p3 = Promise.all([prom1 , prom2]);
-// p3.then((a)=>{
-//     console.log(a);
-// }).catch((e)=>{
-//     console.log(e);
-// })
+let p3 = Promise.all([prom1 , prom2]);
+p3.then((a)=>{
+    console.log(a);
+}).catch((e)=>{
+    console.log(e);
+})
 
-let p4 = Promise.all([prom1 , prom2]);
+let p4 = Promise.allSettled([prom1 , prom2]);
+p4.then((a)=>{
+    console.log(a);
+}).catch((e)=>{
+    console.log(e);
+})
+
+let p5 = Promise.race([prom1 , prom2]);
+p4.then((a)=>{
+    console.log(a);
+}).catch((e)=>{
+    console.log(e);
+})
+
+let p6 = Promise.any([prom1 , prom2]);
 p4.then((a)=>{
     console.log(a);
 }).catch((e)=>{
