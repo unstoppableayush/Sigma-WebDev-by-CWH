@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling</title>
+    <style>
+        .child{
+            background-color: aliceblue;
+            border: 2px solid black;
+            padding: 34px;
+            margin: 34px;
+            cursor: pointer;
+        }
+        .childContainer{
+            background-color: beige;
+            border: 2px solid black;
+            padding: 34px;
+            margin: 34px;
+        }
+        .container{
+            background-color: rgb(98, 98, 39);
+            border: 2px solid black;
+            padding: 34px;
+            margin: 34px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="childContainer">
+            <div class="child">
+                I am a child
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector(".child").addEventListener("click", (e)=>{
+        e.stopPropagation();
+        alert("Child was clicked")
+        }
+        );
+
+        document.querySelector(".childContainer").addEventListener("click", (e)=>{
+        e.stopPropagation();
+        alert("ChildContainer was clicked")
+        }
+       );
+
+        document.querySelector(".container").addEventListener("click", (e)=>{
+        e.stopPropagation();
+        alert("container was clicked")
+        }
+        );
+
+        //If you are living in bihar the automatically you are living in India and also inside India and Also inside Asia
+
+        //In javascript you have clicked in the child then automatically you have clicked on ChildContainer and also Container becoz child is indside the ChildContainer and Conatainer
+
+        // this is called Event Bubbling.
+
+        //If we want not event bubbling and not propagation then we can we stopPropagation() to stop progation of event of elements.
+
+        function getRandomColor(){
+        let val1 = Math.ceil(Math.random()*255);
+        let val2 = Math.ceil(Math.random()*255);
+        let val3 = Math.ceil(Math.random()*255);
+
+            return `rgb(${val1},${val2} , ${val3})`;
+
+        }
+
+        let a =setInterval(()=>{
+            document.querySelector(".childContainer").style.background = getRandomColor();
+            //at every 1 second the function will run and genrate random color
+        },1000);
+
+        //repeat same thing after a fix interval of time
+
+        let b =setTimeout(()=>{
+            document.querySelector(".container").style.background = getRandomColor();
+            //after 3 second the function will run and genrate random color once
+        },3000);
+
+        console.log(a,b);
+
+        // clearTimeout(2);//cancel the setTimeout
+        // clearInterval(1);//cancel the setInterval
+
+
+    </script>
+</body>
+</html>

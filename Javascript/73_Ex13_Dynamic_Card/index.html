@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Card</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            
+           
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            background-color: rgb(16, 16, 16);
+            flex-direction: column;
+            align-items: center;
+        }
+        .card{
+            display: flex ;
+            width: 60vw;
+            border-radius: 10px;
+            cursor: pointer;
+            padding: 4px;
+            padding-left: 10px;
+        }
+
+        .card:hover{
+            background-color: rgb(72, 71, 71);
+        }
+        .card-content{
+            padding: 10px;
+        }
+        
+        .image{
+            width: fit-content;
+            height: fit-content;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            padding-top: 4px;
+            
+            
+        }
+        img{
+            border-radius: 8px;
+            width: 150px;
+            object-fit: cover;
+        }
+        .bg{
+            border: 1px black solid;
+        }
+        .timestamp{
+            position: absolute;
+            bottom: 9px;
+            right: 9px;
+            padding: 2px;
+            border-radius: 5px;
+            font-weight: bold;
+            color: aliceblue;
+            background-color:rgb(73, 73, 73);
+        }
+        .title{
+        font-weight: bold;
+        color: aliceblue;
+
+        }
+        .stats{
+            color: aliceblue;
+            margin-top: 9px;
+            font-size: 12px;
+        }
+        
+    </style>
+</head>
+<body>
+
+   
+    <script src="srcipt.js"></script>
+
+</body>
+</html>
