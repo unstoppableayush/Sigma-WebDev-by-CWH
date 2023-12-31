@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacker's Terminal</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100;200;300;400;500;600;700;800&family=Open+Sans&family=Roboto&display=swap');
+
+        body{
+            background-color: #008000;
+            color: white;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            font-size: 30px;
+        }
+       
+        
+
+    </style>
+</head>
+<body>
+    <!-- create a hacking simulator with green background and it shows these messages with random delay of 1 to 7 seconds
+
+    Intializing Hacking...
+    Reading your Files...
+    Password files Detected...
+    Sending all passwords and personal files to server ...
+    cleaning up...
+
+    The three dots must blink so that it look like a real termial -->
+
+    
+    <script >
+
+    
+
+    const addItem = async (item)=>{
+        await randomDelay();
+        
+        let div = document.createElement("div");
+
+        div.innerHTML = item;
+
+        document.body.append(div);
+
+    }
+
+
+    const randomDelay = ()=>{
+
+        let timeout =1 + 6 * Math.random();
+        return new Promise((resolve, reject)=>{
+            setTimeout(()=>{
+                resolve();
+            },timeout * 1000)
+        });
+    }
+
+    async function main(){
+        let t = setInterval(()=>{
+        let last = document.body.getElementsByTagName("div");
+        last = last[last.length - 1];
+
+        if(last.innerHTML.endsWith("...")){
+            last.innerHTML = last.innerHTML.slice(0 , last.innerHTML.length-3);
+        }
+        else{
+            last.innerHTML = last.innerHTML + ".";
+        }
+        
+        
+
+        },700);
+
+        let text = ["Intializing Hacking",
+        "Reading your Files",
+        "Password files Detected",
+        "Sending all passwords and personal files to server",
+        "cleaning up"]
+
+        for (const item of text) {
+            await addItem(item);
+        }
+
+        await randomDelay()
+        clearInterval(t)
+    }
+
+    main();
+    
+
+
+    </script>
+</body>
+</html>
