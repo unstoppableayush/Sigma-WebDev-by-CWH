@@ -64,7 +64,7 @@ async function main(){
     console.log("Load Data");
 
     let data =await getData2();  // to wait the async function we use await
-    //it resolve the promise and gives data as well as removes the promise chain
+    //it resolve the promise and gives data as well as removes  the promise chain
 
     console.log(data);
 
@@ -89,4 +89,6 @@ main();
 //     //to solve this we can also use async await
 //     // to getpout of callback problem
 // })
+
+
 
