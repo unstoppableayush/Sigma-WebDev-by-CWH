@@ -206,7 +206,7 @@ p{
     width: 70vw;
     padding: 12px;
     border-radius: 10px;
-    height: 40px;
+    min-height: 45px;
     opacity: 50%;
 
 }
@@ -244,7 +244,9 @@ p{
     font-size: 13px;
     width: 150px;
 }
-
+.info{
+    word-break: break-all;
+}
 .playnow{
     display: flex;
    justify-content: center;
@@ -264,7 +266,7 @@ p{
     border: 2px solid white;
     border-radius: 20px;
     position: absolute;
-    bottom: 8px;
+    bottom:10px;
     cursor: pointer;
     
 }
@@ -296,14 +298,103 @@ p{
     font-size: 13px;
 
 }
+.volume{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 10px;
+    width: 30%;
+    font-size: 12px;
+    cursor: pointer;
+}
+
 .songtime{
     display: flex;
     justify-content: end;
-    width: 40%;
+    width: 10%;
     font-size: 13px;
     
 }
 
 .songinfo , .songtime{
     padding: 0px 10px;
+}
+
+.hamburger{
+    display: none;
+}
+
+.nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.close{
+    display: none;
+}
+
+
+
+@media (max-width: 1200px) {
+    .left{
+        position: absolute;
+        left: -120%;
+        transition: all .5sec;
+        z-index: 1;
+        width: 370px;
+        background-color: #1f1e1e;
+        padding: 0;
+    }
+
+    .close{
+        position: absolute;
+        right: 25px;
+        top: 30px;
+        display: block;
+        
+    }
+ 
+    .songinfo , .songtime{
+        font-size: 11px;
+    }
+
+    .abovebar{
+        padding-bottom: 10px;
+    }
+    .right{
+        width: 100vw;
+        margin: 0px;
+    }
+    .playbar{
+        /* width: 88vw; */
+        width: calc(100vw - 60px);
+        
+    }
+    .seekbar{
+        /* width: 95%; */
+        width: calc(100vw - 60px);
+    }
+
+    .hamburger{
+        display: block;
+        width: 33px;
+    }
+    .card{
+        width: 250px;
+    }
+    .card-container{
+        justify-content: center;
+    }
+}
+
+@media (max-width : 500px) {
+    .volume{
+        display: flex;
+        flex-direction: column;
+        gap: 10 px;
+        width: 30%;
+    }
+   
 }

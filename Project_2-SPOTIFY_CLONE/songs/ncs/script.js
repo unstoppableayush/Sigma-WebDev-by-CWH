@@ -1,6 +1,8 @@
 console.log("let's play with javascript");
 
 let currentSong = new Audio();
+let songUl;
+let currFolder;
 
 //seconds to minute seconds conversion
 function secondsToMinutesSeconds(seconds) {
@@ -18,9 +20,11 @@ function secondsToMinutesSeconds(seconds) {
 }
 
 
-async function getSongs(){
+async function getSongs(folder){
 
-    let b = await fetch("http://127.0.0.1:3000/Project_2-SPOTIFY_CLONE/songs/");
+    currFolder = folder;
+
+    let b = await fetch(`http://127.0.0.1:3000/Project_2-SPOTIFY_CLONE/${currFolder}/`);
 
     let resposne = await b.text();
 
@@ -33,7 +37,7 @@ async function getSongs(){
     for(let i= 0 ; i<as.length ; i++){
         const element = as[i];
         if(element.href.endsWith(".mp3")){
-            songs.push(element.href.split("/songs/")[1]);
+            songs.push(element.href.split(`/${currFolder}/`)[1]);
         }
     }
 
@@ -42,7 +46,7 @@ async function getSongs(){
 
 const playMusic = (track , pause=false)=>{
     
-    currentSong.src = "/Project_2-SPOTIFY_CLONE/songs/" + track;
+    currentSong.src = `/Project_2-SPOTIFY_CLONE/${currFolder}/` + track;
     if(!pause){
         currentSong.play();
         play.src = "pause.svg";
@@ -55,11 +59,11 @@ const playMusic = (track , pause=false)=>{
 async function main(){
 
     //get the list of all the songs
-    let songs = await getSongs();
+    let songs = await getSongs("songs/ncs");
     console.log(songs);
     playMusic(songs[0] ,true);
 
-    let songUl = document.querySelector(".songList").getElementsByTagName("ul")[0];
+    songUl = document.querySelector(".songList").getElementsByTagName("ul")[0];
 
     for (const song of songs) {
         songUl.innerHTML = songUl.innerHTML + `  <li>
@@ -115,6 +119,45 @@ async function main(){
         document.querySelector(".circle").style.left = (e.offsetX / e.target.getBoundingClientRect().width *100)+"%";
 
         currentSong.currentTime = currentSong.duration * timepercent / 100 ;
+    })
+
+    //Add an event listner for hamburger
+    
+    document.querySelector(".hamburger").addEventListener("click" ,()=>{
+        document.querySelector(".left").style.left = 0;
+    })
+
+    //Add an event listner for close button
+    document.querySelector(".close").addEventListener("click" ,()=>{
+        document.querySelector(".left").style.left = "-120%";
+    })
+
+    //Add an event listner to previous and next
+
+    previous.addEventListener("click" , ()=>{
+        currentSong.pause()
+        console.log("previous");
+
+        let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0]); 
+        if(index-1 >= 0)
+        playMusic(songs[index-1])
+    })
+
+    next.addEventListener("click" , ()=>{
+        currentSong.pause()
+        console.log("next");
+
+        let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0]);
+        console.log(index);
+
+        if(index+1 < songs.length)
+        playMusic(songs[index+1])
+    })
+
+    //Add an event to volume
+    document.querySelector(".range").getElementsByTagName("input")[0].addEventListener("change" , (e)=>{
+        console.log("setting value to",e.target.value);
+        currentSong.volume =parseInt(e.target.value)/100;
     })
 
 }
