@@ -63,6 +63,7 @@ async function main(){
     console.log(songs);
     playMusic(songs[0] ,true);
 
+    //show all the songs in the playlist
     songUl = document.querySelector(".songList").getElementsByTagName("ul")[0];
 
     for (const song of songs) {
@@ -158,6 +159,17 @@ async function main(){
     document.querySelector(".range").getElementsByTagName("input")[0].addEventListener("change" , (e)=>{
         console.log("setting value to",e.target.value);
         currentSong.volume =parseInt(e.target.value)/100;
+    })
+
+    //Load the playlist whenever card is clicked
+
+    Array.from(document.getElementsByClassName("card")).forEach(e=>{
+        console.log(e);
+        e.addEventListener("click" ,async item=>{
+            console.log(item.currentTarget.dataset);
+            songs = await getSongs(`songs/${item.currentTarget.folder}`)
+            
+        })
     })
 
 }
