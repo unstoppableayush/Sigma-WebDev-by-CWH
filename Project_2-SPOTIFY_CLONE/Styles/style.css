@@ -200,7 +200,6 @@ p{
 }
 
 .playbar{
-    
     background-color: #2c2b2b; 
     position: fixed;
     bottom: 25px;
@@ -345,7 +344,7 @@ p{
 @media (max-width: 1200px) {
     .left{
         position: absolute;
-        left: -120%;
+        left: -130%;
         transition: all .5sec;
         z-index: 1;
         width: 370px;
@@ -389,18 +388,81 @@ p{
     .card{
         width: 250px;
     }
+    .card:hover{
+        .play {
+            opacity: 1;
+            top:210px;
+        }
+    }
     .card-container{
         justify-content: center;
+        max-height: unset;
+
+        overflow-y: unset;
     
+    }
+    .left{
+        position: fixed;
+        top: 0px;
     }
 }
 
 @media (max-width : 500px) {
+    .card{
+        width: auto;
+    }
+    .card:hover{
+        .play {
+            opacity: 1;
+            top:255px;
+        }
+    }
+    .card-container{
+        margin-bottom: 20vh;
+    }
+    
     .volume{
         display: flex;
         flex-direction: column;
         gap: 10 px;
         width: 30%;
     }
-   
+    .buttons > *{
+        margin: 0 2px;
+    }
+    .arrow{
+        width: 15px;
+        border-radius: 20px;
+        background-color: white;
+        opacity: 0.5;
+        cursor: not-allowed;
+    
+    }
+    .header{
+        gap: 0;
+    }
+    .nav{
+        gap :10px;
+    }
+    .loginbtn{
+        font-weight: bold;
+        font-size: 12px;
+        border-radius: 30px;
+        padding: 10px;
+        width: 70px;
+    }
+    .signupbtn{
+        font-weight: bold;
+        color: #a7a7a7;
+        outline: none;
+        background-color:#0d0d0d ;
+        border: none;
+        font-size: 12px;
+        /* padding: 0px 20px; */
+    }
+    .left{
+        position: fixed;
+        top: 0;
+        width: 100vw;
+    }
 }

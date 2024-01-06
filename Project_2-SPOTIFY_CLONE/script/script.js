@@ -76,7 +76,7 @@ const playMusic = (track , pause=false)=>{
     currentSong.src = `/Project_2-SPOTIFY_CLONE/${currFolder}/` + track;
     if(!pause){
         currentSong.play();
-        play.src = "pause.svg";
+        play.src = "Images/pause.svg";
     }
 
     document.querySelector(".songinfo").innerHTML=decodeURI(track);
@@ -211,6 +211,9 @@ async function main(){
     document.querySelector(".range").getElementsByTagName("input")[0].addEventListener("change" , (e)=>{
         console.log("setting value to",e.target.value);
         currentSong.volume =parseInt(e.target.value)/100;
+        if(currentSong.volume > 0){
+            document.querySelector(".volume img").src = document.querySelector(".volume img").src.replace("mute.svg","volume.svg")
+        }
     })
 
     //Adde event listenr to mute the track
