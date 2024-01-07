@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing Post Request</title>
+</head>
+<body>
+    <script>
+        async function testPost(){
+            let a = await fetch("/", {method : "POST"})
+            let b = await a.text()
+            console.log(b) 
+        }
+        testPost();
+
+        //fetch the post request from root  and displaing in console
+
+        async function testPost1(){
+            let a = await fetch("/", {method : "PUT"})
+            let b = await a.text()
+            console.log(b) 
+        }
+        testPost1();
+
+        //fetch the put request from root  and displaing in console
+
+        async function testPost2(){
+            let a = await fetch("/", {method : "DELETE"})
+            let b = await a.text()
+            console.log(b) 
+        }
+        testPost2();
+
+        //fetch the delete request from root  and displaing in console
+    </script>
+
+
+</body>
+</html>
