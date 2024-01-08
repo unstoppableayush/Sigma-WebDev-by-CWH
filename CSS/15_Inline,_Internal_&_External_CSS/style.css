@@ -1,0 +1,8 @@
+/* This is external CSS */
+
+p{
+    color: aqua;
+    background-color: brown;
+}
+
+/* Using external css is best practice */
