@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CSS Selector Master Class</title>
+
+    <style>
+        /* Element Selector */
+        div{
+            
+            background-color: red;
+        }
+        /* Class Selector */
+        .yellow{
+            background-color: yellow;
+        }
+        /* Id selector */
+        #green{
+            background-color: green;
+        }
+        /* Child Selectors -> next to div */
+        div > p{ 
+            color: blue;
+            background-color: brown;
+        }
+        /* Descendant Selector -> p inside div */
+        div p{
+            color: blue;
+            background-color: brown;
+        }
+        /* Universal Selector */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* Pseudo selector */
+        a:visited{
+            color: green;
+        }
+        a:active{
+            background-color: red;
+        }
+        a:hover{
+            background-color: yellow;
+        }
+        p:first-child{
+            background-color: aqua;
+        }
+        p:last-child{
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <div >
+        I'm div
+    </div>
+    <div class="yellow">
+        I'm Ayush
+        <p>I am a para inside</p>
+    </div>
+
+    <div class="yellow">
+       I'm yellow
+       <article>
+            <p>I am a para inside article</p>
+       </article>
+        
+    </div>
+
+    <div id="green">
+        Green
+    </div>
+    
+    <a href="https://www.google.com">Go to google</a>
+
+    <main class="one">
+        <p>I am first</p>
+        <p>I am second</p>
+</main>
+</body>
+</html>
