@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Sizing Units</title>
+</head>
+<style>
+    *{
+        margin: 0;;
+        padding: 0;
+    }
+    .box{
+        border: 2px solid black;
+        /* width: 120px; */
+        width: 80vw;
+        margin: auto;
+        height: 10vh;
+        box-sizing: border-box;
+    }
+    .container{
+        border: 2px solid black;
+        /* width: 120px; */
+        width: 80vw;
+        /* height: 80vh; */
+        min-height: 60vh;
+        margin: 23px auto;
+        font-size: 18px;
+        background-color: aquamarine;
+        box-sizing: border-box;
+        
+    }
+    .container > div{
+        font-size: 2em; 
+        /* property inherited -> double of above font size will be*/
+        font-size: 2rem;
+        /* font size = root font size * 2 */
+        width: 50%;
+        /* 50% of parent */
+        border:2px solid rebeccapurple;
+    }
+    .container > div > div{
+        border: 2px solid red;
+        width: 50%;
+    }
+    .myCont{
+        background-color: red;
+        color: yellow;
+        font-size: 22px;
+        width: 100vmin;
+        /* height: 100vmax; */
+    }
+</style>
+<body>
+    <div class="box">
+        This is a box
+    </div>
+    <div class="container">
+        <div>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis quo fugit dolor esse voluptas dicta recusandae obcaecati nemo suscipit cum. Nobis aperiam eos, laudantium sint deleniti sapiente reprehenderit voluptatem corporis unde harum placeat maiores repellat quas cupiditate perspiciatis voluptatum est repudiandae odio assumenda mollitia qui excepturi provident. Consectetur nulla alias ut, praesentium voluptatum tempora iste reprehenderit?
+        <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos corrupti neque sit! Enim sunt vel nesciunt odit pariatur, voluptate architecto suscipit! Non, dolorum?
+
+        </div>
+        </div>
+    <!-- Expand to see that this container will adjust its height lorem1999 -->
+    </div>
+    <div class="myCont">
+            I'm another div
+    </div>
+</body>
+</html>
