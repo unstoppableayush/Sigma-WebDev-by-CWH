@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Overflow</title>
+    <style>
+        .box{
+            width: 30vw;
+            height: 10vh;
+            border: 2px solid black;
+            /* overflow: scroll; */
+            overflow: auto;
+            /* If overflow then give scrollbar ,if not then no scroll bar */
+
+            /* white-space: nowrap; */
+
+            /* text-overflow: ellipsis; */
+            /* gives dot */
+
+            /* overflow: clip; */
+            /* can't scroll */
+
+            /* overflow-x: hidden;
+            overflow-y: scroll; */
+
+            /* short hand */
+            overflow: hidden auto;
+            /*          x      y */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        I am a good boy Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur impedit illum nemo, ipsa exercitationem possimus vero assumenda voluptates eius? Maiores voluptas tenetur possimus.
+    </div>
+</body>
+</html>
