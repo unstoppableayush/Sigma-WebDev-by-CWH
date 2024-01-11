@@ -1,0 +1,12 @@
+{
+  "name": "93_ex15_clear_the_cutter_sol_by_cwh",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
