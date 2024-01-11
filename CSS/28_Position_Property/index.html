@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Property</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            height: 433px;
+            width: 80vw;
+            padding: 3px;
+            margin: 3px;
+            border: 2px solid black;
+        }
+        .box1{
+            /* To use z-index you have to use relative position */
+            background-color: aqua;
+            /* position: relative; */
+            /* z-index: 1; */
+
+            /* position: absolute; */
+            /* search for parent element and move around the parent element*/
+
+            /* position: sticky;
+            top: 0px;
+            height: 111px;
+            width: 100%;
+            margin: 0;
+            padding: 0; */
+            /* Stick to one place inner part can scroll , used in navbar */
+        }
+        .box2{
+            background-color: blue;
+            /* position: relative;
+            top: 34px;
+            left: 44px; */
+        }
+        .box3{
+            background-color: red;
+            /* position: fixed; */
+            /* always will be fixed */
+            /* bottom: 0px;
+            left: 25vw; */
+        }
+        .box4{
+            background-color: purple;
+        }
+        /* By deafult position of all the boxes is static ,
+        static means we cant apply top , bottom , right , left , z-index */
+
+        .parent{
+            /*Exception: transform ,filter , or perspective , properties ,can also make an element apper as positioned */
+            padding: 43px;
+            margin: 34px;
+            border: 2px solid purple;
+            /* transform: translate(0);   */
+            /* filter: invert(0);    */
+            /* perspective: 0em; */
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="box1 box"></div>
+    <div class="box2 box"></div>
+    <div class="box3 box"></div>
+    <div class="box4 box"></div>
+    </div>
+    
+</body>
+</html>
