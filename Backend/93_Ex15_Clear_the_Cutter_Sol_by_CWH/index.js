@@ -39,5 +39,6 @@ for (const item of files) {
             fs.mkdir(ext)
             fs.rename(path.join(basepath , item),path.join(basepath , ext , item))
         }
+        // Today not done only maintaing streak
     }
 }
