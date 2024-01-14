@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Card</title>
+    <style>
+        *{
+            
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body{
+            margin-top: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #EAEFF1;
+        }
+        .card{
+        
+            height: 500px;
+            width: 300px;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+        }
+        img{
+            height: 210px;  
+            padding: 10px;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+        .tag{
+            display: flex;
+           justify-content:start;
+           padding: 0px 20px;
+        }
+        button{
+            border-radius: 10px;
+            border: 1px solid rgb(189, 189, 189);
+            background-color: white;
+            color:#8592A1;
+            margin:0px 5px ;
+        }
+        .title{
+            margin-left: 15px;
+            color: #0E2632;
+            
+        }
+        .description{
+            margin: 15px;
+            font-size: 15px;
+            color: #A3ABB5;
+        }
+        .read-more{
+            margin: 30px;
+            text-align: center;
+        }
+        a{
+            background-color: #E0EFFF;
+            text-decoration: none;
+            padding: 12px 25px;
+            font-size: 13px;
+            font-weight: bold;
+            color: #52a3ff;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Card.png is file which contains a card Image . write html and css to desgin this card -->
+    <div class="card">
+        <div class="img">
+        <img src="pic.jpg" alt="">
+        </div>
+        <div class="tag">
+            <button>Nature</button>
+            <button>Lake</button>
+        </div>
+        <div class="title">
+            <h1>Lago di Braises</h1>
+        </div>
+        <div class="description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam accusantium aliquid aut nesciunt animi consequatur laboriosam, t
+        </div>
+        <div class="read-more">
+            <a href="">Read More</a>
+        </div>
+    </div>
+</body>
+</html>
