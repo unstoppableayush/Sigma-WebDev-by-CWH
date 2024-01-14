@@ -4,8 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Variables</title>
+    <style>
+        :root{
+            /* global variable */
+            --color:rgb(114, 114, 198);
+            --secolor:rgb(218, 115, 115);
+            --defpad:20px;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            display: flex;
+        }
+        ul li{
+            /* local variable */
+            --color:rgb(59, 172, 125);
+            list-style: none;
+            padding: var(--defpad);
+            list-style: none;
+            background-color: var(--color,blue);
+            border: 2px solid var(--secolor);
+        }
+        .nav{
+            background-color: var(--color);
+        }
+        .container{
+            background-color:var(--secolor);
+        }
+
+    </style>
 </head>
 <body>
-    
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact
+            </li>
+        </ul>
+    </div>
+    <div class="container">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam quo, ex cupiditate, tenetur harum consectetur labore repudiandae inventore magnam temporibus perspiciatis. Commodi ullam nam, nobis dolores architecto dicta enim molestias ea illum, libero alias hic quo natus reprehenderit voluptas voluptate excepturi, quas quod. Ipsam, ipsa?
+    </div>
+
 </body>
 </html>
