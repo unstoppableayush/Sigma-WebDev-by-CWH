@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Float and Clear</title>
+    <style>
+        img{
+            float: left;
+        }
+        .cards{
+            border: 2px solid black;
+            display: flow-root;
+        }
+        .card{
+            border: 2px solid red;
+        }
+        .card:nth-child(3){
+            background-color: aqua;
+            /* clear: right;
+            clear: left; */
+            clear: both;
+            /* n left me dikh jaiyo n right me dikhjaiyo */
+        }
+    </style>
+</head>
+<body>
+    <div class="cards">
+        <img height="230" src="https://img.freepik.com/free-photo/vertical-shot-boat-ocean-with-silhouettes-high-buildings_181624-15217.jpg?w=360&t=st=1705263023~exp=1705263623~hmac=b063c7d1dfe63702c909f264de149730dde471a2e1a76fa40fc8df79804de345" alt="">
+        <div class="card"><p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi doloribus sed pariatur iste magnam cupiditate in, facere animi enim impedit, assumenda rem accusantium ratione quod! Velit ab alias aperiam repellendus vel dolore placeat explicabo?
+        </p></div>
+        <div class="card">Card 2</div>
+        <div class="card">Card 3</div>
+    </div>
+</body>
+</html>
