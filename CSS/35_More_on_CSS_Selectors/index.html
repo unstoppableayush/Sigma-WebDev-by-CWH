@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More On CSS Selectors</title>
+    <style>
+        /* .box:first-child{
+            background-color: red;
+        } */
+        .box::first-line{
+            color: yellow;
+        }
+        .box::first-letter{
+            color: green;
+            font-size: 30px;
+        }
+        .boxes *{
+            color: blue;
+            border: 2px solid black;
+        }
+        /* grouping of selectors */
+        p, a, .box ,[data-color="primary"]{
+            padding-top: 45px;
+        }
+        .box:nth-child(even){
+            background-color: blue;
+        }
+        .box:nth-last-child(1){
+            background-color: red;
+        }
+
+        /* dynamiclly inserting the element before the main content through css */
+        .boxes::before{
+            content: "harry is good";
+            color: blue;
+        }
+        .boxes::after{
+            content: "sigma course is also good";
+            color: orangered;
+        }
+
+        /* slected text will be of aqua color and black b-c color */
+        ::selection{
+            color: aqua;
+            background-color: black;
+        }
+
+        input::placeholder{
+            color: rgb(112, 112, 117);
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div data-color="primary" class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, temporibus fuga quasi adipisci delectus nostrum cumque reiciendis sed. Aut est qui quibusdam. Libero alias tempora placeat enim labore ut ipsam possimus officiis totam fuga! Laboriosam repudiandae dolorum officiis cumque ea sint harum at cum commodi?</div>
+        <div class="box">Hey I'm a box</div>
+        <div class="box">Hey I'm a box</div>
+        <input type="text" placeholder="Type your name here">
+    </div>
+</body>
+</html>
