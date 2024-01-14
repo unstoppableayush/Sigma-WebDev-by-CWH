@@ -1,0 +1,11 @@
+{
+  "description": "",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^8.0.4"
+  },
+  "type": "module",
+  "scripts":{
+    "dev":"nodemon main.js"
+  }
+}
