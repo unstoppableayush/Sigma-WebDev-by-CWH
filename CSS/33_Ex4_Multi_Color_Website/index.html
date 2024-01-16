@@ -4,8 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercise Multi Color Website</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        :root{
+            --color:rgb(198, 175, 175);
+            --backcolor:rgb(54, 130, 101);
+        }
+        body{
+            background-color: gray;
+        }
+        a{
+            text-decoration: none;
+            color: var(--color);
+        }
+        ul{
+            display: flex;
+            list-style: none;
+            justify-content: space-around;
+        }
+        ul li{
+            padding: 10px;
+        }
+        nav{
+            background-color: var(--backcolor);
+        }
+        a:hover{
+            --color:rgb(200, 224, 19);
+        }   
+
+    </style>
 </head>
 <body>
-    
+    <nav>
+        <ul>
+            <li> <a href="#">Home</a> </li>
+            <li> <a href="#">About</a></li>
+            <li> <a href="">Blog</a></li>
+            <li><a href="">Contact Us</a></li>
+        </ul>
+    </nav>
 </body>
 </html>
