@@ -6,8 +6,34 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
   const [showbtn , setshowbtn] = useState(false)
+  const [todos , setTodos] = useState([
+    {
+    title:"Hey",
+    desc:"I am a good todo"
+    },
+    {
+      title:"Hey another todo",
+      desc:"I am a good todo"
+    },
+    {
+      title:"Hey I am grocery todo",
+      desc:"I am a good todo"
+    },
 
-  const Todo = ()=>{ return (<> <div className="todo">I am todo</div> </>) }
+  ])
+
+
+  const Todo = ({todo})=>{ 
+    return (<> 
+
+    <div className="m-4 border-1 border border-purple-400">
+      <div className="todo">{todo.title}</div> 
+      <div className='todo'>{todo.desc}</div>
+    </div>
+
+    
+
+    </>) }
 
   return (
     <>
@@ -21,11 +47,25 @@ function App() {
       </div>
       <h1>Vite + React</h1>
 
-
+      {/* Conditional rendering */}
       {showbtn?<button>Showbtn is true</button> : <button>showbtn is false</button>}
+
       {/* {showbtn && <button>Showbtn is true</button>} */}
 
-      <Todo></Todo>
+
+      {todos.map(item=>{
+
+        return <Todo key={item.title} todo={item}/>
+
+      //  return (<div className="m-4 border-1 border border-purple-400">
+      //  <div className="todo">{todo.title}</div> 
+      //  <div className='todo'>{todo.desc}</div>
+      // </div>)
+
+
+      })}
+
+      {/* <Todo></Todo> */}
 
       <div className="card">
         <button onClick={() => setshowbtn(!showbtn)}>
