@@ -27,6 +27,8 @@ function App() {
     return (<> 
 
     <div className="m-4 border-1 border border-purple-400">
+      
+    
       <div className="todo">{todo.title}</div> 
       <div className='todo'>{todo.desc}</div>
     </div>
@@ -38,10 +40,10 @@ function App() {
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
+        <a href="https://vitejs.dev" target="_blank" rel="noreferrer" >
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
-        <a href="https://react.dev" target="_blank">
+        <a href="https://react.dev" target="_blank " rel="noreferrer">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
@@ -53,14 +55,18 @@ function App() {
       {/* {showbtn && <button>Showbtn is true</button>} */}
 
 
-      {todos.map(item=>{
+      {todos.map(todo=>{
 
-        return <Todo key={item.title} todo={item}/>
+        // return <Todo key={todo.title} todo={todo}/>
 
-      //  return (<div className="m-4 border-1 border border-purple-400">
-      //  <div className="todo">{todo.title}</div> 
-      //  <div className='todo'>{todo.desc}</div>
-      // </div>)
+       return (
+       // eslint-disable-next-line react/jsx-key
+       <div className="m-4 border-1 border border-purple-400">
+                  <div className="todo">{todo.title}</div> 
+                  <div className='todo'>{todo.desc}</div>
+                  </div>
+                  
+          )
 
 
       })}
