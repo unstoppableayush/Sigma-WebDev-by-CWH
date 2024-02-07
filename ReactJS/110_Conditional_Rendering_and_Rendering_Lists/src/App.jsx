@@ -6,8 +6,7 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
   const [showbtn , setshowbtn] = useState(false)
-  const [todos , setTodos] = useState([
-    
+  const [todos , setTodos] = useState([  
     {
     title:"Hey",
     desc:"I am a good todo"
