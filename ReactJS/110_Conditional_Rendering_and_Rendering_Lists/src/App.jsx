@@ -7,6 +7,7 @@ function App() {
   const [count, setCount] = useState(0)
   const [showbtn , setshowbtn] = useState(false)
   const [todos , setTodos] = useState([
+    
     {
     title:"Hey",
     desc:"I am a good todo"
@@ -28,7 +29,7 @@ function App() {
 
     <div className="m-4 border-1 border border-purple-400">
       
-    
+
       <div className="todo">{todo.title}</div> 
       <div className='todo'>{todo.desc}</div>
     </div>
