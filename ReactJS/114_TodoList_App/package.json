@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "preact": "^10.19.3",
+    "react-icons": "^5.0.1",
     "uuid": "^9.0.1"
   },
   "devDependencies": {

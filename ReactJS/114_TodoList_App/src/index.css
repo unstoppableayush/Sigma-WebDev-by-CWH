@@ -5,3 +5,9 @@
     background-color: black;
     color: white;
 } */
+
+
+body{
+    --tw-bg-opacity:1;
+    background-color: rgb(59, 83, 87);
+}
