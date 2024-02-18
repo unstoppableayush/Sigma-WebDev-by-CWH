@@ -1,14 +1,14 @@
 import React from 'react'
 import {createBrowserRouter} from 'react-router-dom'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
     
   return (
    <nav>
-    <Link to="/"><li>Home</li></Link>
-    <Link to="/about"><li>About</li></Link>
-    <Link to="/login"><li>Login</li></Link>
+    <NavLink className={(a)=>{return a.isActive?"red":""}} to="/"><li>Home</li></NavLink>
+    <NavLink className={(a)=>{return a.isActive?"red":""}} to="/about"><li>About</li></NavLink>
+    <NavLink className={(a)=>{return a.isActive?"red":""}} to="/login"><li>Login</li></NavLink>
     
    </nav>
   )
