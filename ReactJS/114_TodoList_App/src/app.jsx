@@ -1,12 +1,12 @@
-import { useState , useEffect } from 'preact/hooks'
+import { useState , useEffect } from 'react'
 import Navbar from './components/Navbar'
 import { FaEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import { v4 as uuidv4 } from 'uuid';
 
 export function App() {
-  const [todo, settodo] = useState("")
-  const [todos, settodos] = useState([])
+  const [todo, setTodo] = useState("")
+  const [todos, setTodos] = useState([])
   const [ShowFinished, setShowFinished] = useState(true)
 
   useEffect(()=> {
@@ -14,13 +14,29 @@ export function App() {
     let todoString = localStorage.getItem("todos")
     if(todoString){
       let todos = JSON.parse(localStorage.getItem("todos"))
-      settodos(todos);
+      setTodos(todos);
 
     }
   }, [])
+
+  // if(todos.length === 0){
+  //   localStorage.clear();
+  // }
   
-  const saveToLS = (params) =>{
+  const saveToLS = () =>{
     localStorage.setItem("todos", JSON.stringify(todos))
+  }
+
+  const handleAdd = ()=>{
+    if(todos.length == 0){
+      setTodo("");
+    }
+    setTodos([...todos, { id: uuidv4(), todo, isCompleted: false }]);
+    
+    console.log(todos);
+    saveToLS();
+    
+    
   }
 
   const toggleFinished = (e) => { 
@@ -29,24 +45,25 @@ export function App() {
 
   const handleEdit = (e,id)=>{
     
-   let todo = todos.filter(item => item.id === id)
-    settodo(todo[0].todo)
+   let t = todos.filter(item => item.id === id)
+    setTodo(t[0].todo)
     handleDelete(null , id);
 
-    saveToLS();
+    
   }
 
   const handleDelete = (e,id)=>{
 
-    const newTodos = todos.filter(item=>{
-      return item.id !== id
+    let newTodos = todos.filter(item=>{
+      return item.id !== id;
     });
-    settodos(newTodos);
+    setTodos(newTodos);
+    
     saveToLS();
   }
 
   const handleChange = (e)=>{
-    settodo(e.target.value)
+    setTodo(e.target.value)
   }
 
   const handleCheckbox = (e) => { 
@@ -56,7 +73,7 @@ export function App() {
           todo.isCompleted = !todo.isCompleted;
         }
       })
-      settodos([...todos])
+      setTodos([...todos])
       saveToLS();
       
       // console.log(todos)
@@ -68,15 +85,11 @@ export function App() {
       // })
       // let newTodos = [...todos];
       // newTodos[index].isCompleted = !newTodos[index].isCompleted;
-      // settodo(newTodos);
+      // setTodo(newTodos);
 
    }
 
-  const handleAdd = ()=>{
-    settodos(todos => [...todos, { id: uuidv4(), todo, isCompleted: false }]);
-    settodo("")
-    saveToLS();
-  }
+  
   return (
     <>
     <Navbar/>
@@ -98,19 +111,19 @@ export function App() {
 
             {todos.map(item=>{
             
-             return (ShowFinished || !item.isCompleted) && <div className="todo flex justify-between md:w-3/5 my-3">
+             return (ShowFinished || !item.isCompleted) && (<div key={item.id} className="todo flex justify-between md:w-3/5 my-3">
 
               <div className='flex gap-8'>
-              <input onChange={handleCheckbox} type="checkbox" name={item.id} value={item.isCompleted}  />
+              <input onChange={handleCheckbox} type="checkbox" name={item.id} checked={item.isCompleted} />
               <div className={item.isCompleted? "line-through" : ""}>{item.todo}</div>
               </div>
 
               <div className="button flex h-full">
-                <button onClick={(e)=>handleEdit(e,item.id)} className='bg-violet-800 hover:bg-violet-950 p-2 font-bold py-1 text-sm text-white rounded-md mx-1'><FaEdit /></button>
+                <button onClick={(e)=>{handleEdit(e,item.id)}} className='bg-violet-800 hover:bg-violet-950 p-2 font-bold py-1 text-sm text-white rounded-md mx-1'><FaEdit /></button>
                 <button onClick={(e)=>{handleDelete( e, item.id)}} className='bg-violet-800 hover:bg-violet-950 p-2 font-bold py-1 text-sm text-white rounded-md mx-1'><MdDelete /></button>
               </div>
 
-            </div>
+            </div>)
 
             })}
 
