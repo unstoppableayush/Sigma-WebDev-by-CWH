@@ -24,8 +24,11 @@ function App() {
     })
   }
  const onSubmit = async (data) =>{
-  await delay(2) //simulating network delay
-  console.log(data)
+  // await delay(2) //simulating network delay
+
+  let r = await fetch("http://localhost:3000/" , {method:"POST"  , headers:{"Content-Type":"application/json",}, body:JSON.stringify(data)})
+  let res = await r.text()
+  console.log(data , res)
 
   // if(data.username !== "ayush"){
   //   setError("myform" ,{message:"Username is invalid"})
@@ -33,7 +36,7 @@ function App() {
   // if(data.username === "rohan"){
   //   setError("blocked" ,{message:"Sorry this user is blocked"})
   // }
-  
+
  }
   return (
     <>
