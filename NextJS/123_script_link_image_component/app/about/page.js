@@ -9,3 +9,8 @@ const about = () => {
 }
 
 export default about
+
+export const metadata = {
+  title: "About Facebook - Contact with peoples",
+  description: "This is about facebook",
+};
