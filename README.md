@@ -1,6 +1,6 @@
 # Sigma Web Development Course
 
-## HTML
+## HTML ( *Day 1 to 13* )
 
 
 
@@ -28,19 +28,19 @@
 
 
 
-## JavaScript
+## JavaScript ( *Day 52 to 83* )
 | Days   | Topic        | Points |
 | ---    |  ---         | -----  |
 
 
-## NodeJS
+## NodeJS ( *Day 84 to 87* )
 
-## ExpressJS
+## ExpressJS ( *Day 88 to 93* )
 
-## MongoDB and Mongoose
+## MongoDB and Mongoose ( *Day 94 to 98* )
 
-## Tailwind CSS
+## Tailwind CSS ( *Day 99 to 102* )
 
-## React
+## React ( *Day 103 to 120* )
 
-## NextJS
+## NextJS ( *Day 121 to 128* )
