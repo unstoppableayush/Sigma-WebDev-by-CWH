@@ -25,6 +25,12 @@
 | 28. | Position Property | |
 | 29. | Ex-3 Design the Card | |
 | 30. | Variables in CSS | |
+| 31. | Media Queries | |
+| 32. | Ex-3 Soln by CWH | |
+| 33. | Ex-4 Multi Color Website | |
+| 34. | CSS Float and Clear | |
+| 35. | More on CSS Selectors| |
+| 36. | Design this Layout | |
 
 
 
