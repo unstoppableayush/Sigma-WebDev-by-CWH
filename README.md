@@ -5,6 +5,8 @@
 
 
 ## CSS ( *Day 14 to 51* )
+<details markdown='1' open>
+    <summary>&nbsp;Click me to toogle</summary>
 
 |Days | Topic        | Points |
 | --- |  ---         | ----- |
@@ -32,11 +34,49 @@
 | 35. | More on CSS Selectors| |
 | 36. | Design this Layout | |
 
+</details>
+
 
 
 ## JavaScript ( *Day 52 to 83* )
+<details >
+    <summary>&nbsp;Click me to toogle</summary>
+
 | Days   | Topic        | Points |
 | ---    |  ---         | -----  |
+| 54. | Introduction to Javascript||
+| 55. | Variables and Datatype | |
+| 56. | Conditionals & Expressions | |
+| 57. | Loops | |
+| 58. | Functions | |
+| 59. | Exercise - Faulty Calculator||
+| 60. | Strings | |
+| 61. | Ex9 - Faulty Calculator Soln by CWH ||
+| 62. | Ex10 - Business Name Generator||
+| 63. | Arrays ||
+| 64. | Ex-10 Business Name Generator Soln by CWH||
+| 65. | Ex-11 Factorial ||
+| 66. | DOM (Document Object Model) | |
+| 67. | Dom Children , Parent , Siblings Node ||
+| 68. | Walking the Dom ||
+| 69. | Ex-11 Factorial solution by CWH||
+| 70. | Ex-12 DOM |
+| 71. | DOM Inserting and Removing ||
+| 72. | Ex-12 Dom Solution by CWH ||
+| 73. | Ex-13 Dynamic Card ||
+| 74. | Events , Event Bubbling , SetInterval & setTimeout |
+| 75. | Callback & Promises ||
+| 76. | Async Await ||
+| 77. | Ex-13 Card Sol by CWH ||
+| 78. | Ex- 14 Hacker's Terminal ||
+| 79. | Tru , Catch & Error Handling ||
+| 80. | Class & Object ||
+| 81. | Ex-14 Hacker's Terminal Soln by CWH ||
+| 82. | Advance Javascript||
+| 83. | Javascript Interview Questions ||
+
+</details>
+
 
 
 ## NodeJS ( *Day 84 to 87* )
