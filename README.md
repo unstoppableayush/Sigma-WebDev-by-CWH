@@ -77,11 +77,31 @@
 
 </details>
 
-
-
 ## NodeJS ( *Day 84 to 87* )
 
+<details >
+    <summary>&nbsp;Click me to toogle</summary>
+| Days   | Topic        | Points |
+| ---    |  ---         | -----  |
+| 85. | Nodejs & Npm(Node Package Manager)||
+| 86. | Common JS vs EchmaScript Modules ||
+| 87. | Working with Files(fs module)||
+
+</details> 
+
 ## ExpressJS ( *Day 88 to 93* )
+<details >
+    <summary>&nbsp;Click me to toogle</summary>
+| Days   | Topic        | Points |
+| ---    |  ---         | -----  |
+| 88. | Introduction to ExpressJS||
+| 89. | Response , Request Router in Express ||
+| 90. | Middlewares in ExpressJS ||
+| 91. | Ex-15 Clear the Cutter ||
+| 92. | Ejs template Engine in ExpressJS ||
+| 93. | Ex-15 Clear the cutter soln by CWH ||
+
+</details> 
 
 ## MongoDB and Mongoose ( *Day 94 to 98* )
 
