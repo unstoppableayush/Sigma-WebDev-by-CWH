@@ -81,6 +81,7 @@
 
 <details >
     <summary>&nbsp;Click me to toogle</summary>
+    
 | Days   | Topic        | Points |
 | ---    |  ---         | -----  |
 | 85. | Nodejs & Npm(Node Package Manager)||
@@ -92,6 +93,7 @@
 ## ExpressJS ( *Day 88 to 93* )
 <details >
     <summary>&nbsp;Click me to toogle</summary>
+
 | Days   | Topic        | Points |
 | ---    |  ---         | -----  |
 | 88. | Introduction to ExpressJS||
@@ -106,6 +108,7 @@
 ## MongoDB and Mongoose ( *Day 94 to 98* )
 <details >
     <summary>&nbsp;Click me to toogle</summary>
+
 | Days   | Topic        | Points |
 | ---    |  ---         | -----  |
 | 94. | Installing MongoDB & MongoDB Compass||
@@ -119,6 +122,12 @@
 
 ## Tailwind CSS ( *Day 99 to 102* )
 
+<details >
+    <summary>&nbsp;Click me to toogle</summary>
+| Days   | Topic        | Points |
+| ---    |  ---         | -----  |
+
+</details>
 ## React ( *Day 103 to 120* )
 
 ## NextJS ( *Day 121 to 128* )
