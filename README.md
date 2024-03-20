@@ -104,6 +104,18 @@
 </details> 
 
 ## MongoDB and Mongoose ( *Day 94 to 98* )
+<details >
+    <summary>&nbsp;Click me to toogle</summary>
+| Days   | Topic        | Points |
+| ---    |  ---         | -----  |
+| 94. | Installing MongoDB & MongoDB Compass||
+| 95. | Crud Operation in MongoDB ||
+| 96. | Installing Mongoose & Using it with Express || 
+| 97. | Ex-16 Dummy Data Generator ||
+| 98. | Ex- 16 Soln Dummy Data Generator by CWH ||
+
+</details>
+
 
 ## Tailwind CSS ( *Day 99 to 102* )
 
