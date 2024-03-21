@@ -81,7 +81,7 @@
 
 <details >
     <summary>&nbsp;Click me to toogle</summary>
-    
+
 | Days   | Topic        | Points |
 | ---    |  ---         | -----  |
 | 85. | Nodejs & Npm(Node Package Manager)||
@@ -126,8 +126,11 @@
     <summary>&nbsp;Click me to toogle</summary>
 | Days   | Topic        | Points |
 | ---    |  ---         | -----  |
-
+| 98. | Tailwind CSS||
+| 100. | Ex-17 Design a Layout||
+| 101. | X Clone using Tailwind CSS ||
 </details>
+
 ## React ( *Day 103 to 120* )
 
 ## NextJS ( *Day 121 to 128* )
