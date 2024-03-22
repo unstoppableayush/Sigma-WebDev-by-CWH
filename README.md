@@ -132,5 +132,28 @@
 </details>
 
 ## React ( *Day 103 to 120* )
+<details >
+    <summary>&nbsp;Click me to toogle</summary>
+| Days   | Topic        | Points |
+| ---    |  ---         | -----  |
+| 105. | Intro to React & Why we use React ? ||
+| 106. | Components, Props and JSX ||
+| 107. | Hooks and State ||
+| 108. | useEffect Hook ||
+| 109. | useRef Hook ||
+| 110. | Conditional Rendering and Rendering Lists ||
+| 111. | Ex-18 Display the Cards ||
+| 112. | Handling Events in React ||
+| 113. | Ex-18 Solution by CWH ||
+| 114. | Todo List App ||
+| 115. | React Router (Routing in React)||
+| 116. | useContext Hook ||
+| 117. | useMemo Hook ||
+| 118. | useCallback Hook ||
+| 119. | Handling Forms ||
+| 120. | Redux ||
+
+
+</details>
 
 ## NextJS ( *Day 121 to 128* )
