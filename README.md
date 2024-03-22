@@ -124,6 +124,7 @@
 
 <details >
     <summary>&nbsp;Click me to toogle</summary>
+    
 | Days   | Topic        | Points |
 | ---    |  ---         | -----  |
 | 98. | Tailwind CSS||
@@ -134,6 +135,7 @@
 ## React ( *Day 103 to 120* )
 <details >
     <summary>&nbsp;Click me to toogle</summary>
+
 | Days   | Topic        | Points |
 | ---    |  ---         | -----  |
 | 105. | Intro to React & Why we use React ? ||
