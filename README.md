@@ -132,7 +132,7 @@
 | 101. | X Clone using Tailwind CSS ||
 </details>
 
-## React ( *Day 103 to 120* )
+## React ( *Day 105 to 120* )
 <details >
     <summary>&nbsp;Click me to toogle</summary>
 
