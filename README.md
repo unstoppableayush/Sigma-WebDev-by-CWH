@@ -124,7 +124,7 @@
 
 <details >
     <summary>&nbsp;Click me to toogle</summary>
-    
+
 | Days   | Topic        | Points |
 | ---    |  ---         | -----  |
 | 98. | Tailwind CSS||
@@ -159,3 +159,19 @@
 </details>
 
 ## NextJS ( *Day 121 to 128* )
+<details >
+    <summary>&nbsp;Click me to toogle</summary>
+
+| Days   | Topic        | Points |
+| ---    |  ---         | -----  |
+| 121. | Intro to NextJS ||
+| 122. | Server Components in NextJS ||
+| 123. | Script Link Image Component ||
+| 124. | Server Actions ||
+| 125. | Middleware in NextJS ||
+| 126. | Creating Apis in NextJS ||
+| 127. | Auth.js authentication in NextJS||
+| 128. | Dynamic Routes in NextJS ||
+| 129. | Layout In NextJS ||
+
+</details>
