@@ -1,4 +1,5 @@
 # Sigma Web Development Course
+Welcome to my Sigma Web Development Course repositories! These repositories contain the projects and exercises I've created and completed throughout the Sigma Web Development Course by Code with Harry.
 
 ## HTML ( *Day 1 to 13* )
 
