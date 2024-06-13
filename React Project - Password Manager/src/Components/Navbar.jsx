@@ -22,6 +22,9 @@ const Navbar = () => {
             </a>
           </li>
         </ul>
+        <div>
+          <img src="github.svg" className="invert p-5 w-20" alt="" />
+        </div>
       </div>
     </nav>
   );
